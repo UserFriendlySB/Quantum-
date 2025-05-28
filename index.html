@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quantum 🌑</title>
+  <link rel="icon" href="./media/moon.jpg" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+  <div class="afterContainer" id="afterContainer">
+  <div class="lights" id="lights">
+    <div class="light" id="light1"><img class="lightimg" src="./media/light.png" alt="light"></div>
+    <div class="light" id="light2"><img class="lightimg" src="./media/light.png" alt="light"></div>
+    <div class="light" id="light3"><img class="lightimg" src="./media/light.png" alt="light"></div>
+  </div>
+  <br>
+  <div class="card" id="timercon">
+    <h1>Baby You Are Getting Old</h1>
+    <div class="agetime" id="agetime">
+      <div>
+        <h2 id="Years1">00</h2>
+        <p>Years</p>
+      </div>
+      <div>
+        <h2 id="Months1">00</h2>
+        <p>Months</p>
+      </div>
+      <div>
+        <h2 id="Days1">00</h2>
+        <p>Days</p>
+      </div>
+      <div>
+        <h2 id="Hours1">00</h2>
+        <p>Hours</p>
+      </div>
+      <div>
+        <h2 id="Minutes1">00</h2>
+        <p>Minutes</p>
+      </div>
+      <div>
+        <h2 id="Seconds1">00</h2>
+        <p>Seconds</p>
+      </div>
+    </div>
+    <div class="active">
+      <label class="switch">
+        <input type = "range" min="1" max="100" id="slider" value="1" oninput="updateValue(this.value)" title="slide for magic">
+      </label>
+    </div>
+  </div>
+  </div>
+  <div class="Container" id="container">
+    <div class="card" id="card1">
+      <h1>Hello Madam ji 🌕</h1>
+      <br>
+      <br>
+      <div class="buttons">
+        <button class="btn" id="btn1" onclick="btn1p()" >Hello</button>
+        <button class="btn" id="btn2" onclick="btn2p()" >Hy</button>
+      </div>
+    </div>
+    <div class="card" id="card2">
+      <h1>How are you?</h1>
+      <br>
+      <br>
+      <div class="buttons">
+        <button class="btn" id="btn3" onclick="btn3p()" >Good</button>
+        <button class="btn" id="btn4" onclick="btn4p()" >Bad</button>
+      </div>
+    </div>
+    <div class="card" id="card3">
+      <h1>
+        I am also good 🥰. Oh I just remember something Want to see?
+      </h1>
+      <br>
+      <br>
+      <button class="btn" id="btn5" onclick="btn5p()" >Yes</button>
+      <button class="btn" id="btn6" onclick="btn6p()" >No</button>
+    </div>
+    <div class="card" id="card4">
+      <h1>
+        Why Baby Your baby is not taking care of you?
+      </h1>
+        <h3>
+          Sorry Madam ji for any mistake 🥺. Plz be happy now 🥺.
+        </h3>
+      <button class="btn" id="btn7" onclick="btn7p()" >Happy now?</button>
+      <button class="btn" id="btn8" onclick="btn8p()" >Still Not happy?</button>
+    </div>
+    <div class="card" id="card5">
+      <h1>Okay Baby when you want to see you can. 🙂</h1>
+      <br>
+      <br>
+      <button class="btn" id="btn9" onclick="btn9p()" >See Now</button>
+      <button class="btn" id="btn10" onclick="btn10p()" >Main Menu</button>
+    </div>
+    <div class="card" id="card6">
+      <h1>Sorry Babyyy I Love You 🥺❤️</h1>
+      <br>
+      <br>
+      <button class="btn" id="btn11" onclick="btn11p()" >Happy Now</button>
+      <button class="btn" id="btn12" onclick="btn12p()" >Still Noe happy</button>
+    </div>
+    <div class="card" id="card7">
+      <h1 id="birthdaycome">Oh Someone's Birthday is coming.</h1>
+      <h2 id="target"></h2>
+      <br>
+      <div class="timer">
+        <div>
+          <h2 id="Days">00</h2>
+          <p>Days</p>
+        </div>
+        <div>
+          <h2 id="Hours">00</h2>
+          <p>Hours</p>
+        </div>
+        <div>
+          <h2 id="Minutes">00</h2>
+          <p>Minutes</p>
+        </div>
+        <div>
+          <h2 id="Seconds">00</h2>
+         <p>Seconds</p>
+        </div>
+      </div>
+      <h2 id="timer0">Oh Timer is 00 right </h2>
+      <audio id="HBD" src="./media/HBD song.mp3" preload="auto"></audio>
+      <div class="sounddiv">
+        <img src="./media/sound.jpg" alt="sound" class="sound" id="sound1">
+        <button class="play" id="play" onclick="playC()">O dear Just click me!</button>
+        <button class="play" id="Lightoff" onclick="Lightoff()">Turn off the light</button>
+        <img src="./media/sound.jpg" alt="sound" class="sound" id="sound2">
+      </div>
+      </div>
+      <button class="ready" id="ready" onclick="fire()">Are You Ready Baby?</button>
+      <audio id="fireworksound" src="./media/Fireworks with Sound Effects.mp3" preload="auto"></audio>
+      <button class ="ready" id="Lighton" onclick="Lighton()">Turn on the light</button>
+      <div class="card" id="fireworks">
+        <canvas id="canvas">Canvas is not supported in your browser or you don't have enabled JavaScript.</canvas>
+      </div>
+  </div>
+  <div class="Maincontainer" id="Maincontainer">
+        <audio id="HBD2" src="./media/HBD2.mp3" preload="auto"></audio>
+        <h1 class="mainheading">Happy Birthday Madam ji 🥳</h1>
+        <br><br><br>
+        <div class="card" id="MainConType">
+          Every moment with you is a gift, but today is extra special because it's the day you came into this world. Your presence lights up every room and brings joy to everyone around you. Here's the day filled with love, laughter, and beautiful memories.
+          <br> 
+          Happy Birthday!
+        </div>
+        <br><br><br><br>
+        <details id="seenowdetails" value="off" onclick="seenow(this)">
+          <summary>See now</summary>
+        </details>
+        <div class="imagidiv" id="imagidiv">
+        <div class="imgdiv" id="img1d">
+          <br>
+          <img src="./media/1.jpg" alt="ghibli1" class="img" id="img1" onclick="bigshow(this.src, this.id)" data-aos="fade-down-top" data-aos-duration="1000">
+          <br><br>
+          <img src="./media/2.jpg" alt="ghibli2" class="img" id="img2" onclick="bigshow(this.src, this.id)" data-aos="fade-down-top" data-aos-duration="1000">
+          <br><br>
+          <img src="./media/3.jpg" alt="ghibli3" class="img" id="img3" onclick="bigshow(this.src, this.id)" data-aos="fade-down-top" data-aos-duration="1000">
+          <br><br>  
+          <img src="./media/4.jpg" alt="ghibli4" class="img" id="img4" onclick="bigshow(this.src, this.id)" data-aos="fade-down-top" data-aos-duration="1000">
+          <br><br>
+          <img src="./media/5.jpg" alt="ghibli5" class="img" id="img5" onclick="bigshow(this.src, this.id)" data-aos="fade-down-top" data-aos-duration="1000">
+          <br><br>
+          <img src="./media/6.jpg" alt="ghibli6" class="img" id="img6" onclick="bigshow(this.src, this.id)" data-aos="fade-down-top" data-aos-duration="1000">
+          <br><br>
+          <img src="./media/7.jpg" alt="ghibli7" class="img" id="img7" onclick="bigshow(this.src, this.id)" data-aos="fade-down-top" data-aos-duration="1000">
+          <br><br>
+          <img src="./media/8.jpg" alt="ghibli8" class="img" id="img8" onclick="bigshow(this.src, this.id)" data-aos="fade-down-top" data-aos-duration="1000">
+          <br><br>
+          <img src="./media/9.jpg" alt="ghibli9" class="img" id="img9" onclick="bigshow(this.src, this.id)" data-aos="fade-down-top" data-aos-duration="1000">
+          <br><br>
+          <img src="./media/10.jpg" alt="ghibli10" class="img" id="img10" onclick="bigshow(this.src, this.id)" data-aos="fade-down-top" data-aos-duration="1000">
+          <br><br>
+          <img src="./media/11.jpg" alt="ghibli11" class="img" id="img11" onclick="bigshow(this.src, this.id)" data-aos="fade-down-top" data-aos-duration="1000">
+          <br><br>
+          <img src="./media/12.jpg" alt="ghibli12" class="img" id="img12" onclick="bigshow(this.src, this.id)" data-aos="fade-down-top" data-aos-duration="1000">
+          <br><br>
+          <img src="./media/13.jpg" alt="ghibli13" class="img" id="img13" onclick="bigshow(this.src, this.id)" data-aos="fade-down-top" data-aos-duration="1000">
+          <br><br>
+          <img src="./media/14.jpg" alt="ghibli14" class="img" id="img14" onclick="bigshow(this.src, this.id)" data-aos="fade-down-top" data-aos-duration="1000">
+          <br><br>
+          <img src="./media/15.jpg" alt="ghibli15" class="img" id="img15" onclick="bigshow(this.src, this.id)" data-aos="fade-down-top" data-aos-duration="1000">
+          <br><br>
+          <img src="./media/16.jpg" alt="ghibli16" class="img" id="img16" onclick="bigshow(this.src, this.id)" data-aos="fade-down-top" data-aos-duration="1000">
+          <br><br>
+          <img src="./media/17.jpg" alt="ghibli17" class="img" id="img17" onclick="bigshow(this.src, this.id)" data-aos="fade-down-top" data-aos-duration="1000">
+        </div>
+  <!-- Overlay popup -->
+        <div id="overlay" class="overlay" onclick="closePopup()">
+          <span class="close-btn" onclick="closePopup(event)">✕</span>
+          <img id="popup-image" class="popup-image" alt="Popup image" onclick="event.stopPropagation()">
+        </div>
+        <form class="cheack">
+          <label for="check"></label>
+          <input type="radio" class="cheackr"  name="Ghibili" value="on" id="check" title="Enable Ghibili Mode" onclick="ghibliMode(this)">
+          <label for="check2"></label>
+          <input type="radio" class="cheackr"  name="Ghibili" value="off" id="check2" title="Disable Ghibili Mode" checked onclick="ghibliMode(this)">
+        </form>
+        <br><br>
+        <div class="card" id="BirthdayLetter" data-aos="zoom-in" data-aos-delay="50" data-aos-duration="1000">
+          <h3>To My Dearest Love,</h3>
+          <br>
+          Today is a day near and dear to my heart-- because it’s the day you were born. And now I can’t help but feel immense thankfulness for that moment, because it brought me to you.
+          You have done all the ways of making me feel light and love full and laughter-full since the day I met you. Your smile lights up the darkest of days, and that your very presence in my world makes everything seem right. You are my sunshine, my soothing balm, my supreme reward.
+          On your birthday, I simply want you to understand how much you are loved. You have the right to all of the happiness in the world, not only today, but every day. I wish this day could be spent doing all the things that fill your heart with joy, because you deserve nothing but the best.
+          Here's to celebrating you—your heart, your soul, and all that makes you so very unique. I'm looking forward to making more memories with you, laughing until we both cry, and holding every moment close to our hearts.
+          <br><br>
+          <div class="start">
+            Happy Birthday, my love!
+            <br>
+            With all my heart,
+            <br>
+            Yours forever
+            <br>
+            <h3>Mr. Bhadra ❤️</h3>
+          </div>
+          <br><br>
+        </div>
+        </div>
+        <br><br>
+        <div class="floating-emojis">
+          <span>🎉</span>
+          <span>💗</span>
+          <span>✨</span>
+          <span>🎂</span>
+          <span>💖</span>
+          <span>🎁</span>
+      </div>
+      <br><br>
+  </div>
+  <style id="style"></style>
+</body>
+<script src="script.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</html>
+<script>
+  AOS.init();
+</script>
